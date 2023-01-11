@@ -1330,8 +1330,8 @@ export function getFreeDrawSvgPath(element: ExcalidrawFreeDrawElement) {
   // Consider changing the options for simulated pressure vs real pressure
   const options: StrokeOptions = {
     simulatePressure: element.simulatePressure,
-    size: element.strokeWidth * 4.25,
-    thinning: 0.6,
+    size: element.strokeWidth * 2, // Match other tools
+    thinning: 0.0, // Don't simulate pressure, just maintain a steady thickness
     smoothing: 0.5,
     streamline: 0.5,
     easing: (t) => Math.sin((t * Math.PI) / 2), // https://easings.net/#easeOutSine
